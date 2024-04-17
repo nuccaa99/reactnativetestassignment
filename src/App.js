@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Link, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import './App.css'
+import { useState, createContext } from 'react'
+import List from './routes/List'
+
+import { Home } from './routes/Home'
+
+export const AppContext = createContext(null)
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+  },
+  {
+    path: 'list',
+    element: <List />,
+  },
+])
 
 function App() {
+  const [state, setState] = useState(null)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <AppContext.Provider value={{ state, setState }}>
+      <RouterProvider router={router} />
+    </AppContext.Provider>
+  )
 }
 
-export default App;
+export default App
