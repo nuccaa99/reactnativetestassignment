@@ -14,57 +14,41 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### `დავალების ინსტურქცია`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## გარემოს მომზადება:
 
-### `npm run build`
+    გარემოს მოსამზადებლად დაგჭირდებათ github-ის ექაუნთი, თუ არ გაქვთ არსებული, მაშინ შექმენით ახალი.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    თქვენი github-ის ექაუნთით გახსენით მოცემული რეპოზიტორია.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    გახსენით ახალი codespace, მეინიდან მოჭერით ახალი ბრენჩი, დაარქვით თქვენი სახელი და გვარი და იმუშავეთ github-ში ჩაინტეგირებულ ide-ში.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    თუ დროზე ადრე მორჩით მუშაობას, დროის ამოწურვამდე არ დაფუშოთ თქვენი ბრენჩი მეინზე.##
 
-### `npm run eject`
+## დავალების ინსტრუქცია:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+მოცემული დავალებების შესასრულებლად გეძლევათ 1-სთ.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+დავალება შედგება 2 ნაწილისგან: React და JavaScript ალგორითმები. ალგორითმების ნაწილი მოიცავს ბოუნს ამოცანას, რომელიც არ არის სავალდებულო.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+პირველი ნაწილი: React
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    1. Home გვერდზე ბათონზე დაჭერით გააერთიანებთ data ფოლდერში მოცემულ Array_1-ს და Array_2-ს, მიღებული მასივი უნდა იყოს მხოლოდ უნიკალური ელემენტებისგან შემდგარი.
+    არ შეგიძლიათ გამოიყენოთ მეთოდები როგორებიცაა: filter, map, reduce და ა.შ. (ამოცანა უნდა იყოს დაწერილი for ან/და while ციკლების და if/else-ების გამოყენებით)
+    2. მასივების გაერთიანების პროცესის შემდეგ უნდა გადავიდეთ List გვერდზე და დავარენდეროთ მიღებული მასივი. დარენდერებული თითოეული კომპონენტი უნდა შეიცავდეს, "name"-ს, "bodys"-ს და ასევე ფუნქციონირებად წაშლის ღილაკს.
 
-## Learn More
+მეორე ნაწილი: Javascriptis ალგორითმები
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ალგორითმული ამოცანების საწერად, შეგიძლიათ ნებისმიერ გვერდზე გაიტანოთ ცალკე ფუნქცია და კონსოლის საშუალებით დატესტოთ.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ამოცანა 1: მოცემული გვაქვს ლუწი ოდენობის რიცხვთა მასივი, მასივში არსებულ ელემენტთა წყვილებს გავუცვალოთ ინდექსები და მიღებული მასივი დავაბრუნოთ სტირნგის სახით.
+მაგ: [1,2,3,4,2,3] - > [2,1,4,3,3,2] -> "214332"
 
-### Code Splitting
+ამოცანა 2: მოცემული გვაქვს დადებითი რიცხვების მასივი, ფუნქციამ უნდა დააბრუნოს მაქსიმალური დადებითი სხვაობა ორ რიცხვს შორის ისე, რომ საკლების(რიცხვს, რომელსაც აკლდება) ინდექსი მეტი უნდა იყოს მაკლების(რიცხვი, რომელიც აკლდება) ინდექსზე, დადებითი სხვაობის არ არსებობის შემთხვევაში დააბურნოს 0.
+მაგ1: [8,2,5,6,1,4] -> პასუხი: 4, ახსნა: 6-2=4, 6-ის ინდექსი მეტია 2-ის ინდექსზე;
+მაგ2: [12,10,8,5,4] -> პასუხი: 0, ახსნა: არცერთი მარცხნივ მდგომი ელემენტი არ არის ნაკლები მარჯვნივ მდგომზე;
+მაგ3: [9,35,5,17,1,3] -> პასუხი: 26, ახსნა 35-9=26, 35-ის ინდექსი მეტია 9-ის ინდექსზე;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ბონუს ამოცანა:
+მოცემული გვაქვს ორი სტრინგი, შეგვიძლია თუ არა პირველი სტრინგის წრეზე დატრიალებით მივიღოთ მეორე სტრინგი. abc-ს წრეზე დატრიალებები. abc -> cab -> bca -> abc. მაგ: "abc", "cab" -> true
